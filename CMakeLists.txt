@@ -4,7 +4,9 @@ project(my_app VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(my_app main.cpp)
+add_executable(my_app src/main.cpp)
+
+install(TARGETS my_app DESTINATION bin)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
